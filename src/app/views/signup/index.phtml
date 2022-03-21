@@ -1,0 +1,70 @@
+<html>
+
+<body>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <div class="mb-md-5 mt-md-4 pb-5">
+
+                                <h2 class="fw-bold mb-2 text-uppercase">Signup</h2>
+                                <p class="text-white-50 mb-5">Please enter your details!</p>
+
+                                <form action="signup/register" method="post">
+
+                                    <div class="form-outline form-white mb-4">
+                                        <input required type="text" id="name" name="name" class="form-control form-control-lg" />
+                                        <label class="form-label" for="name">Your name</label>
+                                    </div>
+                                    <div class="form-outline form-white mb-4">
+                                        <input required type="email" id="email" name="email" class="form-control form-control-lg" />
+                                        <label class="form-label" for="email">E-mail</label>
+                                    </div>
+                                    <div class="form-outline form-white mb-4">
+                                        <input required type="password" id="password" name="password" class="form-control form-control-lg" />
+                                        <label class="form-label" for="password">Password</label>
+                                    </div>
+
+                                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Signup</button>
+                                </form>
+                            </div>
+
+                            <div>
+                                <p class="mb-0">Already have an account? <a href="login" class="text-white-50 fw-bold">Sign in</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<h2>Sign up using this form</h2>
+
+<?php echo $this->tag->form("signup/register"); ?>
+
+<p>
+    <label for="name">Name</label>
+    <?php echo $this->tag->textField("name"); ?>
+</p>
+
+<p>
+    <label for="email">E-Mail</label>
+    <?php echo $this->tag->textField("email"); ?>
+</p>
+<p>
+    <label for="password">Password</label>
+    <?php echo $this->tag->textField("password"); ?>
+</p>
+<p>
+    <?php echo $this->tag->submitButton("Register"); ?>
+</p>
+
+</form>
